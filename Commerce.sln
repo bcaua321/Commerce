@@ -23,6 +23,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Commerce.ValidationsTest", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Commerce.Data", "src\Commerce.Data\Commerce.Data.csproj", "{F0348EDC-3129-46D3-B6DB-C9411DEB00EC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Commerce.Identity", "src\Commerce.Identity\Commerce.Identity.csproj", "{33BB5376-E835-4A4D-9687-95F223D52FB5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -61,6 +63,10 @@ Global
 		{F0348EDC-3129-46D3-B6DB-C9411DEB00EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F0348EDC-3129-46D3-B6DB-C9411DEB00EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F0348EDC-3129-46D3-B6DB-C9411DEB00EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33BB5376-E835-4A4D-9687-95F223D52FB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33BB5376-E835-4A4D-9687-95F223D52FB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33BB5376-E835-4A4D-9687-95F223D52FB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33BB5376-E835-4A4D-9687-95F223D52FB5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -74,6 +80,7 @@ Global
 		{7900A699-44B3-44AC-A25C-51A71273D545} = {F3A2218C-1B3B-4884-87B2-D5F2BCC0E27D}
 		{7E48BF56-957E-4C4F-B9F0-AED0A5A33248} = {F3A2218C-1B3B-4884-87B2-D5F2BCC0E27D}
 		{F0348EDC-3129-46D3-B6DB-C9411DEB00EC} = {C22B76E0-7BD0-44B0-84F3-2D16F7D51B80}
+		{33BB5376-E835-4A4D-9687-95F223D52FB5} = {C22B76E0-7BD0-44B0-84F3-2D16F7D51B80}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {86B95EAD-471A-4B00-84F1-014BC0A853B6}
