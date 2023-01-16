@@ -19,6 +19,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Commerce.Data\Commerce.Data.csproj" />
+    <ProjectReference Include="..\Commerce.Identity\Commerce.Identity.csproj" />
     <ProjectReference Include="..\Commerce.Services\Commerce.Services.csproj" />
   </ItemGroup>
 

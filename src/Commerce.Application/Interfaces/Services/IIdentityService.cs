@@ -6,6 +6,6 @@ namespace Commerce.Application.Interfaces.Services
     public interface IIdentityService
     {
         public Task<UserRegisterResponse> RegisterUser(UserRegisterRequest user);
-        public Task<UserRegisterResponse> Login(UserRegisterRequest user);
+        public Task<UserLoginResponse> Login(UserLoginRequest user);
     }
 }

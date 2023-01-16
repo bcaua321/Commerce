@@ -1,5 +1,6 @@
 ﻿using Commerce.Application.Transfers.Requests;
 using Commerce.Services.Services.ProductServices;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Commerce.Api.Controllers
@@ -17,6 +18,7 @@ namespace Commerce.Api.Controllers
 
         [HttpPost]
         [ProducesResponseType(StatusCodes.Status201Created)]
+        [Authorize]
         public async Task<IActionResult> CreateProduct([FromBody]ProductRequest product)
         {
             var result = await _productService.RegisterProduct(product);
