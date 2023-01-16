@@ -25,7 +25,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\src\Commerce.Application\Commerce.Application.csproj" />
     <ProjectReference Include="..\..\src\Commerce.Domain\Commerce.Domain.csproj" />
+    <ProjectReference Include="..\..\src\Commerce.Services\Commerce.Services.csproj" />
+    <ProjectReference Include="..\Commerce.TestTools\Commerce.TestTools.csproj" />
   </ItemGroup>
 
 </Project>

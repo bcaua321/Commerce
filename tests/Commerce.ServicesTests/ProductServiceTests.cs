@@ -1,5 +1,11 @@
 ﻿using AutoMapper;
+using Commerce.Application.Exceptions;
+using Commerce.Application.Mappings;
+using Commerce.Application.Transfers.Requests;
+using Commerce.Domain.Entities;
 using Commerce.Domain.Repositories.ProductRepository;
+using Commerce.Services.Services.ProductServices;
+using Commerce.TestTools.RequestGenerators;
 using FluentValidation;
 using NSubstitute;
 using NSubstitute.ReturnsExtensions;
