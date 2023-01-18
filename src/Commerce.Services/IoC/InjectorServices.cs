@@ -1,4 +1,5 @@
 ﻿using Commerce.Application.Transfers.Requests;
+using Commerce.Services.Services.CategoryServices;
 using Commerce.Services.Services.ProductServices;
 using FluentValidation;
 using Microsoft.Extensions.DependencyInjection;
@@ -10,6 +11,7 @@ namespace Commerce.Services.IoC
         public static void AddApplication(this IServiceCollection services)
         {
             services.AddScoped<IProductService, ProductService>();
+            services.AddScoped<ICategoryService, CategoryService>();
             services.AddScoped<IValidator<ProductRequest>, ProductValidator>();
         }
     }
