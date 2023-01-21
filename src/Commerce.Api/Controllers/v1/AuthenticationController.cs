@@ -3,10 +3,11 @@ using Commerce.Application.Transfers.Requests;
 using Commerce.Application.Transfers.Responses;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Commerce.Api.Controllers
+namespace Commerce.Api.Controllers.v1
 {
-    [Route("api/[controller]")]
+    [Route("api/v{version:apiVersion}/[controller]")]
     [ApiController]
+    [ApiVersion("1.0")]
     public class AuthenticationController : ControllerBase
     {
         public IIdentityService IdentityService { get; set; }
@@ -18,12 +19,12 @@ namespace Commerce.Api.Controllers
         [HttpPost("register")]
         public async Task<IActionResult> RegisterUser([FromBody] UserRegisterRequest userRegisterRequest)
         {
-            if(!ModelState.IsValid)
+            if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
             var result = await IdentityService.RegisterUser(userRegisterRequest);
 
-            if(result.Sucess)
+            if (result.Sucess)
                 return Ok(result);
             else if (result.Errors.Count() > 0)
                 return BadRequest(result);

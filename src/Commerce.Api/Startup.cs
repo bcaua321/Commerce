@@ -1,4 +1,5 @@
-﻿using Commerce.Api.Extensions;
+﻿using Commerce.Api.Documentation;
+using Commerce.Api.Extensions;
 using Commerce.Api.Filters;
 using Commerce.Api.IoC;
 using Commerce.Application.Mappings;
@@ -27,7 +28,9 @@ namespace Commerce.Api
                 cfg.AddProfile(new AutoMapperConfiguration());
             }).CreateMapper());
 
+            services.ApiVersioning();
             services.AddSwagger();
+            services.ConfigureOptions<ConfigureSwaggerOptions>();
             services.AddServices(Configuration);
             services.AddJwtAuthentication(Configuration);
             services.AddRepositories();
@@ -37,7 +40,7 @@ namespace Commerce.Api
         public void Configure(WebApplication app, IWebHostEnvironment env)
         {
             app.UseSwagger();
-            app.UseSwaggerUI();
+            app.UseSwaggerUiVersioned();
 
             // Configure the HTTP request pipeline.
             app.UseHttpsRedirection();

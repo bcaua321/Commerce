@@ -8,5 +8,6 @@ namespace Commerce.Services.Services.CategoryServices
         Task<CategoryResponse> CreateCategory(CategoryRequest categoryRequest);
         Task<CategoryResponse> UpdateCategory(CategoryRequest categoryRequest);
         Task<List<CategoryResponse>> GetAllCategories();
+        Task<CategoryResponse> GetById(int id);
     }
 }

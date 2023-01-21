@@ -3,10 +3,11 @@ using Commerce.Services.Services.ProductServices;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Commerce.Api.Controllers
+namespace Commerce.Api.Controllers.v1
 {
-    [Route("api/[controller]")]
+    [Route("api/v{version:apiVersion}/[controller]")]
     [ApiController]
+    [ApiVersion("1.0")]
     public class ProductController : ControllerBase
     {
         private IProductService _productService { get; }
@@ -16,10 +17,10 @@ namespace Commerce.Api.Controllers
         }
 
 
+        [Authorize]
         [HttpPost]
         [ProducesResponseType(StatusCodes.Status201Created)]
-        [Authorize]
-        public async Task<IActionResult> CreateProduct([FromBody]ProductRequest product)
+        public async Task<IActionResult> CreateProduct([FromBody] ProductRequest product)
         {
             var result = await _productService.RegisterProduct(product);
 
@@ -42,6 +43,7 @@ namespace Commerce.Api.Controllers
             return Ok(result);
         }
 
+        [Authorize]
         [HttpPut]
         [ProducesResponseType(StatusCodes.Status200OK)]
         public async Task<IActionResult> Update(ProductRequest product)

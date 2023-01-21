@@ -41,5 +41,13 @@ namespace Commerce.Services.Services.CategoryServices
 
             return response;
         }
+
+        public async Task<CategoryResponse> GetById(int id)
+        {
+            var results = await _categoryRepository.GetById(id);
+            var response = mapper.Map<CategoryResponse>(results);
+
+            return response;
+        }
     }
 }
